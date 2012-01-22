@@ -4,8 +4,8 @@ from wsgiref.simple_server import make_server
 initialize()
 app = MeepExampleApp()
 
-httpd = make_server('', 8000, app)
-print "Serving HTTP on port 8000..."
+httpd = make_server('', 8008, app)
+print """Serving HTTP on port 8008..."""
 
 # Respond to requests until process is killed
 httpd.serve_forever()

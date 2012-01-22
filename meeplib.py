@@ -47,7 +47,7 @@ _users = {}
 
 def _get_next_user_id():
     if _users:
-        return max(_users.keys()) + 1
+        return int(max(_user_ids.keys())) + 1
     return 0
 
 def _reset():
@@ -95,6 +95,7 @@ def delete_message(msg):
 
 ###
 
+
 class User(object):
     def __init__(self, username, password):
         self.username = username
@@ -118,3 +119,14 @@ def get_all_users():
 def delete_user(user):
     del _users[user.username]
     del _user_ids[user.id]
+
+def check_user(username, password):
+    aUser = get_user(username)
+    try:
+        aUser
+    except NameError:
+        aUser = None
+    if aUser is None:
+        if aUser.password is password:
+            return true;
+    return false

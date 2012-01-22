@@ -1,7 +1,6 @@
 import meeplib
 import traceback
 import cgi
-import Tkinter
 
 def initialize():
     # create a default user
@@ -12,9 +11,6 @@ def initialize():
 
     # done.
 
-def callback():
-    print "click!"
-
 class MeepExampleApp(object):
     """
     WSGI app object.
@@ -24,7 +20,7 @@ class MeepExampleApp(object):
 
         username = 'test'
 
-        return ["""you are logged in as user: %s.<p><a href='/m/add'>Add a message</a><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/messages'>Show messages</a><p><a href='/m/delete'>Delete a message</a>""" % (username,)]
+        return ["""you are logged in as user: %s.<p><a href='/m/add'>Add a message</a><p><a href='/create_user'>Create User</a><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/messages'>Show messages</a><p><a href='/m/delete'>Delete a message</a>""" % (username,)]
 
     def login(self, environ, start_response):
         # hard code the username for now; this should come from Web input!
@@ -44,6 +40,47 @@ class MeepExampleApp(object):
         
         return "no such content"
 
+    def create_user(self, environ, start_response):
+        headers = [('Content-type', 'text/html')]
+        
+        start_response("302 Found", headers)
+        return """<form action='add_new_user' method='POST'>
+Username: <input type='text' name='username'><br>
+Password:<input type='text' name='password'><br>
+<input type='submit' value='Create User'></form>"""
+
+    def add_new_user(self, environ, start_response):
+        print environ['wsgi.input']
+        form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
+
+        returnStatement = "user added"
+        try:
+            username = form['username'].value
+        except KeyError:
+            username = None
+        try:
+            password = form['password'].value
+        except KeyError:
+            password = None
+
+        print username
+        print password
+        # Test whether variable is defined to be None
+        if username is None:
+            returnStatement = "username was not set. User could not be created"
+        if password is None:
+            returnStatement = "password was not set. User could not be created"
+        else:
+            new_user = meeplib.User(username, password)
+        
+
+        headers = [('Content-type', 'text/html')]
+        headers.append(('Location', '/'))
+        start_response("302 Found", headers)
+
+        return [returnStatement]
+
+    
     def logout(self, environ, start_response):
         # does nothing
         headers = [('Content-type', 'text/html')]
@@ -124,6 +161,8 @@ class MeepExampleApp(object):
     def __call__(self, environ, start_response):
         # store url/function matches in call_dict
         call_dict = { '/': self.index,
+                      '/create_user': self.create_user,
+                      '/add_new_user':self.add_new_user,
                       '/login': self.login,
                       '/logout': self.logout,
                       '/m/messages': self.list_messages,
