@@ -31,6 +31,9 @@ __all__ = ['Message', 'get_all_messages', 'get_message', 'delete_message',
 # directly from outside the module.  Note, I'm not responsible for
 # what happens to you if you do access them directly.  CTB
 
+# a string, stores the current user that is logged on
+_curr_user = ""
+
 # a dictionary, storing all messages by a (unique, int) ID -> Message object.
 _messages = {}
 
@@ -54,10 +57,11 @@ def _reset():
     """
     Clean out all persistent data structures, for testing purposes.
     """
-    global _messages, _users, _user_ids
+    global _messages, _users, _user_ids, _curr_user
     _messages = {}
     _users = {}
     _user_ids = {}
+    _curr_user = ""
 
 ###
 
@@ -109,6 +113,10 @@ class User(object):
         # register new user ID with the users list:
         _user_ids[self.id] = self
         _users[self.username] = self
+def set_curr_user(username):
+    _curr_user = username
+def get_curr_user():
+    return _curr_user
 
 def get_user(username):
     return _users.get(username)         # return None if no such user
@@ -121,12 +129,16 @@ def delete_user(user):
     del _user_ids[user.id]
 
 def check_user(username, password):
-    aUser = get_user(username)
     try:
-        aUser
+        aUser = get_user(username)
     except NameError:
         aUser = None
-    if aUser is None:
-        if aUser.password is password:
-            return true;
-    return false
+
+    print """db pass: %s""" %(aUser.password,)
+    print """pass: %s""" %(password,)
+
+    if aUser is not None:
+            if aUser.password is password:
+                return True
+    else:
+        return False

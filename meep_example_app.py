@@ -20,25 +20,22 @@ class MeepExampleApp(object):
 
         username = 'test'
 
-        return ["""you are logged in as user: %s.<p><a href='/m/add'>Add a message</a><p><a href='/create_user'>Create User</a><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/messages'>Show messages</a><p><a href='/m/delete'>Delete a message</a>""" % (username,)]
+        return ["""<h1>Welcome!</h1><h2>Please Login or create an account.</h2>
 
-    def login(self, environ, start_response):
-        # hard code the username for now; this should come from Web input!
-        username = 'test'
+<form action='login' method='POST'>
+Username: <input type='text' name='username'><br>
+Password:<input type='text' name='password'><br>
+<input type='submit' value='Login'></form>
 
-        # retrieve user
-        user = meeplib.get_user(username)
+<p>Don't have an account? Create a user <a href='/create_user'>herer</a>"""]
 
-        # set content-type
+    def main_page(self, environ, start_response):
         headers = [('Content-type', 'text/html')]
         
-        # send back a redirect to '/'
-        k = 'Location'
-        v = '/'
-        headers.append((k, v))
-        start_response('302 Found', headers)
-        
-        return "no such content"
+        start_response("200 OK", headers)
+        username = 'test'
+
+        return ["""%s logged in!<p><a href='/m/add'>Add a message</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/messages'>Show messages</a><p><a href='/m/delete'>Delete a message</a>""" % (username,)]
 
     def create_user(self, environ, start_response):
         headers = [('Content-type', 'text/html')]
@@ -80,7 +77,47 @@ Password:<input type='text' name='password'><br>
 
         return [returnStatement]
 
-    
+    def login(self, environ, start_response):
+        print environ['wsgi.input']
+        form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
+
+        returnStatement = "logged in"
+        try:
+            username = form['username'].value
+        except KeyError:
+            username = None
+        try:
+            password = form['password'].value
+        except KeyError:
+            password = None
+
+        # Test whether variable is defined to be None
+        if username is not None:
+             if password is not None:
+                 if meeplib.check_user(username, password) is False:
+                     k = 'Location'
+                     v = '/'
+                     returnStatement = """<p>Invalid user.  Please try again.</p>"""
+           
+                 else:
+                     new_user = meeplib.User(username, password)
+                     k = 'Location'
+                     v = '/main_page'
+             else:      
+                 returnStatement = """<p>password was not set. User could not be created</p>"""
+        else:
+            returnStatement = """<p>username was not set. User could not be created</p>"""
+
+        print """isValidafter: %s """ %(meeplib.check_user(username, password),)
+
+        # set content-type
+        headers = [('Content-type', 'text/html')]
+       
+        headers.append((k, v))
+        start_response('302 Found', headers)
+        
+        return "no such content"    
+
     def logout(self, environ, start_response):
         # does nothing
         headers = [('Content-type', 'text/html')]
@@ -106,7 +143,7 @@ Password:<input type='text' name='password'><br>
         
         if not messages:
             s.append("There are no messages to display.<p>")
-        s.append("<a href='../../'>index</a>")
+        s.append("<a href='../../main_page'>Go Back to Main Page</a>")
        
             
         headers = [('Content-type', 'text/html')]
@@ -154,13 +191,14 @@ Password:<input type='text' name='password'><br>
         meeplib.delete_message(id)
         
         headers = [('Content-type', 'text/html')]
-        headers.append(('Location', '/'))
+        headers.append(('Location', '/main_page'))
         start_response("302 Found", headers)
         return ["message deleted"]
     
     def __call__(self, environ, start_response):
         # store url/function matches in call_dict
         call_dict = { '/': self.index,
+                      '/main_page': self.main_page,
                       '/create_user': self.create_user,
                       '/add_new_user':self.add_new_user,
                       '/login': self.login,
