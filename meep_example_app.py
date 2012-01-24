@@ -94,20 +94,21 @@ Password:<input type='text' name='password'><br>
             password = form['password'].value
         except KeyError:
             password = None
-
+        k = 'Location'
+        v = '/'
         # Test whether variable is defined to be None
         if username is not None:
              if password is not None:
-                 if meeplib.check_user(username, password) is False:
-                     k = 'Location'
-                     v = '/'
-                     returnStatement = """<p>Invalid user.  Please try again.</p>"""
-           
-                 else:
+                 if meeplib.check_user(username, password) is True:
                      new_user = meeplib.User(username, password)
                      meeplib.set_curr_user(username)
                      k = 'Location'
                      v = '/main_page'
+                 else:
+                     k = 'Location'
+                     v = '/'
+                     returnStatement = """<p>Invalid user.  Please try again.</p>"""
+
              else:      
                  returnStatement = """<p>password was not set. User could not be created</p>"""
         else:
