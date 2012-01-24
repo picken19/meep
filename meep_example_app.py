@@ -27,7 +27,7 @@ Username: <input type='text' name='username'><br>
 Password:<input type='text' name='password'><br>
 <input type='submit' value='Login'></form>
 
-<p>Don't have an account? Create a user <a href='/create_user'>herer</a>"""]
+<p>Don't have an account? Create a user <a href='/create_user'>here</a>"""]
 
     def main_page(self, environ, start_response):
         try:
