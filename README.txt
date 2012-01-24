@@ -4,11 +4,16 @@ Titus Brown, ctb@msu.edu.
 and
 Caitlyn Pickens, picken19@msu.edu
 
-##Version 4##
+##Version 5##
 
 	  Implemented methods
 	    Delete all
 	    Delete one
+	    Reply
+
+	  To fix
+	    Nesting layout of replies
+	    Remove reply to replies feature
 
 	  Explored options
 	    CSS templates

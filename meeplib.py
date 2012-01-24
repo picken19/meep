@@ -60,17 +60,21 @@ def _reset():
     _user_ids = {}
 
 ###
-
+#modify to include parent and children ids
 class Message(object):
     """
     Simple "Message" object, containing title/post/author.
 
     'author' must be an object of type 'User'.
+
+    'child' must be an object of type 'list'
     
     """
-    def __init__(self, title, post, author):
+    def __init__(self, title, post, author, parent, child):
         self.title = title
         self.post = post
+        self.parent = parent
+        self.child = child
 
         assert isinstance(author, User)
         self.author = author

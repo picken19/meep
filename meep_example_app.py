@@ -9,7 +9,7 @@ def initialize():
     u = meeplib.User('test', 'foo')
 
     # create a single message
-    meeplib.Message('Greetings Earthlings', 'The meep message board is open.', u)
+    meeplib.Message('Greetings Earthlings', 'The meep message board is open.', u, -1, {})
 
     # done.
 
@@ -64,7 +64,19 @@ class MeepExampleApp(object):
             s.append('title: %s<p>' % (m.title))
             s.append('message: %s<p>' % (m.post))
             s.append('author: %s<px>' % (m.author.username))
+            s.append(
+                """<form action='reply' method='POST'><input type='hidden' value='%d' name='msg_id'><input type='submit' value="Reply"></form>""" % (m.id))
+
+            print m.id
             s.append('<hr>')
+#
+#            if len(m.child):
+#                s.append('----------------------')
+#                for c in m.child:
+#                    s.append('child id: %s<p>' % c)
+#            else:
+#                s.append("<a href='.../reply/'>reply</a>")
+#            s.append('<hr>')
 
         s.append("<a href='../../'>index</a>")
             
@@ -149,7 +161,35 @@ class MeepExampleApp(object):
         headers.append(('Location', '/m/list'))
         start_response("302 Found", headers)
         return ["message added"]
-    
+
+    #how do we pass in the parent id?
+    def reply(self, environ, start_response):
+        headers = [('Content-type', 'text/html')]
+        start_response("200 OK", headers)
+        form = cgi.FieldStorage(fp=environ['wsgi.input'],environ=environ)
+        print form['msg_id'].value
+        s = """<form action='reply_action' method='POST'>Message:<input type='text' name='message'><br><input type='hidden' name='msg_id' value='%d'><br><input type='submit' value='Submit'></form>""" % (int(form['msg_id'].value))
+        print s
+        return s                                                              
+
+    def reply_action(self, environ, start_response):
+        print environ['wsgi.input']
+        form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
+        print 'reply_action a'
+        parent_msg = meeplib.get_message(int(form['msg_id'].value))
+        title = 'user replied to message ' + parent_msg.title
+        print 'reply_action b'
+        print title
+        message = form['message'].value
+        parent = int(form['msg_id'].value)
+        username = 'test' 
+        user = meeplib.get_user(username)
+        new_message = meeplib.Message(title, message, user, parent, -1)
+        headers = [('Content-type', 'text/html')]
+        headers.append(('Location', '/m/list'))
+        start_response("302 Found", headers)
+        return ["reply added"]
+
     def __call__(self, environ, start_response):
         # store url/function matches in call_dict
         call_dict = { '/': self.index,
@@ -161,7 +201,9 @@ class MeepExampleApp(object):
                       '/m/delete_all': self.delete_all_messages_action,
                       '/m/delete_all_action': self.delete_all_messages_action,
                       '/m/delete_one': self.delete_one_message,
-                      '/m/delete_one_action': self.delete_one_message_action
+                      '/m/delete_one_action': self.delete_one_message_action,
+                      '/m/reply': self.reply,
+                      '/m/reply_action': self.reply_action
                       }
 
         # see if the URL is in 'call_dict'; if it is, call that function.
