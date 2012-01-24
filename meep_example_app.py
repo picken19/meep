@@ -30,10 +30,14 @@ Password:<input type='text' name='password'><br>
 <p>Don't have an account? Create a user <a href='/create_user'>herer</a>"""]
 
     def main_page(self, environ, start_response):
+        try:
+            meeplib.get_curr_user()
+        except NameError:
+            meeplib.delete_curr_user()
         headers = [('Content-type', 'text/html')]
         
         start_response("200 OK", headers)
-        username = 'test'
+        username = meeplib.get_curr_user()
 
         return ["""%s logged in!<p><a href='/m/add'>Add a message</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/messages'>Show messages</a><p><a href='/m/delete'>Delete a message</a>""" % (username,)]
 
@@ -101,6 +105,7 @@ Password:<input type='text' name='password'><br>
            
                  else:
                      new_user = meeplib.User(username, password)
+                     meeplib.set_curr_user(username)
                      k = 'Location'
                      v = '/main_page'
              else:      
