@@ -1,0 +1,16 @@
+go http://localhost:8008/create_user
+
+url /create_user
+
+fv 1 username 'george'
+fv 1 password 'foo'
+submit
+
+url /
+
+fv 1 username 'george'
+fv 1 password 'foo'
+submit
+
+url /main_page
+

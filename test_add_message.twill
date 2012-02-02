@@ -1,5 +1,10 @@
-go http://localhost:8000/
-follow "Add a message"
+go http://localhost:8008/
+
+fv 1 username 'test'
+fv 1 password 'foo'
+submit
+
+follow "New Thread"
 
 fv 1 title 'test title FOO'
 fv 1 message 'this is my message'

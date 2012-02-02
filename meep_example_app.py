@@ -1,6 +1,7 @@
 import meeplib
 import traceback
 import cgi
+import cPickle
 
 def initialize():
     # create a default user
@@ -14,6 +15,12 @@ def initialize():
     t.add_post(m)
 
     # done.
+
+    fp = open('save.pickle')
+    obj = cPickle.load(fp)
+    (a) = obj
+    print "a:%s" %(a.username,)
+    print "b:%s" %(a.password,)
 
 class MeepExampleApp(object):
     """
@@ -76,6 +83,10 @@ Password:<input type='text' name='password'><br>
             returnStatement = "password was not set. User could not be created"
         else:
             new_user = meeplib.User(username, password)
+            filename = 'save.pickle'
+            fp = open(filename, 'w')
+            cPickle.dump(new_user, fp)
+            fp.close()
         
 
         headers = [('Content-type', 'text/html')]
@@ -141,7 +152,7 @@ Password:<input type='text' name='password'><br>
 
     def list_messages(self, environ, start_response):
         threads = meeplib.get_all_threads()
-
+        
         s = []
         if threads:
             for t in threads:
