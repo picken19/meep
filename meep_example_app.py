@@ -16,11 +16,11 @@ def initialize():
 
     # done.
 
-    #fp = open('save.pickle')
-    #obj = cPickle.load(fp)
-    #(a) = obj
-    #print "a:%s" %(a.username,)
-    #print "b:%s" %(a.password,)
+    fp = open('save.pickle')
+    obj = cPickle.load(fp)
+    (a) = obj
+    print "a:%s" %(a.username,)
+    print "b:%s" %(a.password,)
 
 class MeepExampleApp(object):
     """

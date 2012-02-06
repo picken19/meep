@@ -16,8 +16,47 @@ class TestApp(unittest.TestCase):
             assert ('Content-type', 'text/html') in headers
 
         data = self.app(environ, fake_start_response)
-        assert 'Add a message' in data[0]
-        assert 'Show messages' in data[0]
+
+        assert 'Login' in data[0]
+        assert 'here' in data[0]
+
+    def test_message_list(self):
+        self.app.username = 'test' # force login
+        environ = {}                    # make a fake dict
+        environ['PATH_INFO'] = '/m/list'
+
+        def fake_start_response(status, headers):
+            assert status == '200 OK'
+            assert ('Content-type', 'text/html') in headers
+
+        data = self.app(environ, fake_start_response)
+        assert 'Back to Main Page' in data[0]
+
+    def test_create_user(self):
+        environ = {}                    # make a fake dict
+        environ['PATH_INFO'] = '/create_user'
+        #environ['wsgi.input'] = ''
+
+        def fake_start_response(status, headers):
+            assert status == '302 Found'
+            assert ('Content-type', 'text/html') in headers
+
+        data = self.app(environ, fake_start_response)
+        assert 'Username:' in data
+        assert 'Password:' in data
+
+    def test_add_thread(self):
+        self.app.username = 'test' # force login
+        environ = {}                    # make a fake dict
+        environ['PATH_INFO'] = '/m/add_thread'
+
+        def fake_start_response(status, headers):
+            assert status == '200 OK'
+            assert ('Content-type', 'text/html') in headers
+
+        data = self.app(environ, fake_start_response)
+        assert 'Title:' in data
+        assert "Message: " in data
 
     def tearDown(self):
         pass
