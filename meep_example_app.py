@@ -16,11 +16,11 @@ def initialize():
 
     # done.
 
-    fp = open('save.pickle')
-    obj = cPickle.load(fp)
-    (a) = obj
-    print "a:%s" %(a.username,)
-    print "b:%s" %(a.password,)
+    #fp = open('save.pickle')
+    #obj = cPickle.load(fp)
+    #(a) = obj
+    #print "a:%s" %(a.username,)
+    #print "b:%s" %(a.password,)
 
 class MeepExampleApp(object):
     """
@@ -169,13 +169,13 @@ Password:<input type='text' name='password'><br>
                     <form action='delete_action' method='POST'>
                     <input name='thread_id' type='hidden' value='%d' />
                     <input name='post_id' type='hidden' value='%d' />
-                    <input type='submit' value='Delete Message' />
+                    <input name='delete' type='submit' value='Delete Message' />
                     </form>
                     """  % (t.id, m.id))
                 s.append("""
                 <form action='reply' method='POST'>
                 <input name='thread_id' type='hidden' value='%d' />
-                <input type='submit' value='Reply to' />
+                <input name='reply' type='submit' value='Reply to' />
                 </form>
                 """ % (t.id))
         else:
