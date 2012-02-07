@@ -4,6 +4,12 @@ import cgi
 import cPickle
 
 def initialize():
+    fp = open('save.pickle')
+    obj = cPickle.load(fp)
+    meeplib._threads = obj[0]
+    meeplib._user_ids = obj[1]
+    meeplib._users = obj[2]
+
     # create a default user
     u = meeplib.User('test', 'foo')
 
@@ -16,11 +22,8 @@ def initialize():
 
     # done.
 
-    fp = open('save.pickle')
-    obj = cPickle.load(fp)
-    (a) = obj
-    print "a:%s" %(a.username,)
-    print "b:%s" %(a.password,)
+
+    
 
 class MeepExampleApp(object):
     """
@@ -85,7 +88,11 @@ Password:<input type='text' name='password'><br>
             new_user = meeplib.User(username, password)
             filename = 'save.pickle'
             fp = open(filename, 'w')
-            cPickle.dump(new_user, fp)
+            saveData = []
+            saveData.append(meeplib._threads)
+            saveData.append(meeplib._user_ids)
+            saveData.append(meeplib._users)
+            cPickle.dump(saveData, fp)
             fp.close()
         
 
