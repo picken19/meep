@@ -1,0 +1,9 @@
+setlocal username <new>
+setlocal password <test>
+
+go http://localhost:8000/login/
+formvalue 1 unickname $username
+formvalue 1 upassword $password
+submit
+
+code 200

@@ -1,0 +1,24 @@
+## reply to a message ##
+#echo "###test reply to a message###"
+go http://localhost:8000/m/list
+#echo "###before submit###"
+#showforms
+fv 1 reply_button click
+submit
+
+url /m/reply
+#showforms
+fv 1 message "hello again"
+submit
+
+url m/list
+find "hello again"
+code 200
+#echo "###after submit###"
+#showforms
+#echo "reply successfully submitted"
+
+## cannot reply to a reply ##
+#showforms
+notfind "Reply to Reply"
+#echo "###cannot reply to reply###"

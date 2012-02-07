@@ -1,0 +1,44 @@
+###  1  ###
+Write functional tests using twill to test all of your Web app functions. See ‘test_add_message.twill in ctb master branch for an example. Name them all .twill files, please, and make sure you can run them all in a row: twill-sh *.twill on your running Web site.
+
+The distinguishing feature of these tests is that when essential functionality in your code is removed (e.g. you comment out a line), the tests fail.
+
+test_reply.twill >> tests the reply functionality
+test_add_message.twill >> tests the login and add functionalities
+test_delete_all.twill >> tests the delete all functionality
+
+###  2  ###
+Write unit tests to test three of your Web app functions; put them in test_app.py (see the file in ctb’s master branch, where there is some simple example code for testing the ‘index’ function).
+
+Again: the distinguishing feature of these tests is that when essential functionality in your code is removed (e.g. you comment out a line), the tests fail.
+
+###  3  ###
+Implement basic data persistence using the pickle module. The goal is to
+
+Here’s some example code, where ‘obj’ is an arbitrary Python object being saved to disk:
+
+d = { 'x' : 'y' }
+obj = (5, 'a', 3.1419, d)
+
+filename = 'save.pickle'
+fp = open(filename, 'w')
+pickle.dump(obj, fp)
+fp.close()
+To re-read this, do:
+
+fp = open(filename)
+obj = pickle.load(fp)
+(a, b, c, d) = obj
+print a
+print b
+print c
+print d
+When the app is run, it should pick up all the messages, users, etc. that it had when you shut it down. As a convenience, you might want to use a ‘try/except’ loop to catch IOErrors when opening the file, and handle having a nonexistent file:
+
+try:
+   fp = open(filename)
+   # load data
+   ...
+except IOError:  # file does not exist/cannot be opened
+   # initialize data from scratch
+   ...

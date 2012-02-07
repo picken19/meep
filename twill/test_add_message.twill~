@@ -1,0 +1,18 @@
+go http://localhost:8000/login
+code 200
+#shorforms
+fv 1 username "test"
+#showforms
+fv 1 password "foo"
+#showforms
+fv 1 login_button click
+submit
+code 200
+
+#showform
+fv 1 title 'test title FOO'
+fv 1 message 'this is my message'
+submit
+
+url /m/list
+find 'FOO'
