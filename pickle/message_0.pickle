@@ -36,14 +36,15 @@ p16
 I0
 sbsS'title'
 p17
-S'Greetings Earthlings'
+S'test title FOO'
 p18
 sS'child'
 p19
 (lp20
-sS'post'
+I1
+asS'post'
 p21
-S'The meep message board is open.'
+S'this is my message'
 p22
 sg16
 I0

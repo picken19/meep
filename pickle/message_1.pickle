@@ -12,7 +12,7 @@ Rp4
 (dp5
 S'parent'
 p6
-I-1
+I0
 sS'author'
 p7
 g0
@@ -25,26 +25,26 @@ Rp10
 (dp11
 S'username'
 p12
-S'new'
+S'test'
 p13
 sS'password'
 p14
-S'test'
+S'foo'
 p15
 sS'id'
 p16
-I1
+I0
 sbsS'title'
 p17
-S'cait'
+S'user replied to message test title FOO'
 p18
 sS'child'
 p19
-(lp20
+I-1
 sS'post'
+p20
+S'hello again'
 p21
-S'please save!'
-p22
 sg16
 I1
 sb.

@@ -1,10 +1,26 @@
-ssh git@github.com
+## Connect to the Repository ##
+
+ssh -T git@github.com
 enter password
+
+## Get a Certain Branch of Code ##
+
+
+git fetch origin [remote-branch]:[new-local-branch] #pull a new branch from a remote repository#
+
+## Add, Commit, Push files to the Repository ##
 git add <file> #any new files#
 git commit -m "message"
-git push origin #changes meep in repository??#
+git push origin #changes meep in repository (online update)#
+
+## Merge ##
+git merge xyz #merges 
 
 
-git log - shows the history of the repository
-git status - shows the difference in status between my code committed and the master
-git diff - shows the differences in text between my code and the master
+## Status Outputs ##
+git log #shows the history of the repository#
+git status #shows the difference in status between my code committed and the master#
+git diff #shows the differences between my (local?) code and the master#
+git branch #shows a list of optional branches#
+
+
