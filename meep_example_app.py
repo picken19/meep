@@ -4,12 +4,6 @@ import cgi
 import cPickle
 
 def initialize():
-    fp = open('save.pickle')
-    obj = cPickle.load(fp)
-    meeplib._threads = obj[0]
-    meeplib._user_ids = obj[1]
-    meeplib._users = obj[2]
-
     # create a default user
     u = meeplib.User('test', 'foo')
 
@@ -29,6 +23,9 @@ class MeepExampleApp(object):
     """
     WSGI app object.
     """
+    def __init__(self):
+        meeplib._threads, meeplib._user_ids, meeplib._users = meeplib.load_state()
+
     def index(self, environ, start_response):
         start_response("200 OK", [('Content-type', 'text/html')])
 
@@ -86,14 +83,7 @@ Password:<input type='text' name='password'><br>
             returnStatement = "password was not set. User could not be created"
         else:
             new_user = meeplib.User(username, password)
-            filename = 'save.pickle'
-            fp = open(filename, 'w')
-            saveData = []
-            saveData.append(meeplib._threads)
-            saveData.append(meeplib._user_ids)
-            saveData.append(meeplib._users)
-            cPickle.dump(saveData, fp)
-            fp.close()
+            meeplib.save_state()
         
 
         headers = [('Content-type', 'text/html')]
@@ -217,6 +207,8 @@ Password:<input type='text' name='password'><br>
         t = meeplib.Thread(title)
         t.add_post(new_message)
 
+        meeplib.save_state()
+
         headers = [('Content-type', 'text/html')]
         headers.append(('Location', '/m/list'))
         start_response("302 Found", headers)
@@ -232,6 +224,8 @@ Password:<input type='text' name='password'><br>
         t = meeplib.get_thread(thread_id)
         post = t.get_post(post_id)
         t.delete_post(post)
+
+        meeplib.save_state()
 
         headers = [('Content-type', 'text/html')]
         headers.append(('Location', '/m/list'))
@@ -283,6 +277,7 @@ Password:<input type='text' name='password'><br>
         t = meeplib.get_thread(thread_id)
         t.add_post(new_message)
         
+        meeplib.save_state()
 
         headers = [('Content-type', 'text/html')]
         headers.append(('Location', '/m/list'))

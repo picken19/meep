@@ -23,6 +23,8 @@ Functions and classes:
 
 """
 
+import cPickle
+
 __all__ = ['Message', 'get_all_messages', 'get_message', 'delete_message',
            'User', 'get_user', 'get_all_users', 'delete_user', 'Thread']
 
@@ -66,6 +68,26 @@ def _reset():
     _users = {}
     _user_ids = {}
     _curr_user = []
+
+def save_state():
+    filename = "save.pickle"
+    fp = open(filename, 'w')
+    objects = (_threads, _user_ids, _users)
+    cPickle.dump(objects, fp)
+    fp.close()
+
+def load_state():
+    try:
+        filename = "save.pickle"
+        fp = open(filename, 'r')
+        objects = cPickle.load(fp)
+        (_threads, _user_ids, _users) = objects
+        #print "successfully loaded"
+        #print _threads, _user_ids, _users
+        return _threads, _user_ids, _users
+    except IOError:
+        #print "meeplib.load_state() IOError"
+        return {}, {}, {}
 
 ###
 
