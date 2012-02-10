@@ -24,6 +24,8 @@ Functions and classes:
 """
 
 import cPickle
+from Cookie import SimpleCookie
+
 
 __all__ = ['Message', 'get_all_messages', 'get_message', 'delete_message',
            'User', 'get_user', 'get_all_users', 'delete_user', 'Thread']

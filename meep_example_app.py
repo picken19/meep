@@ -2,6 +2,8 @@ import meeplib
 import traceback
 import cgi
 import cPickle
+import meepcookie
+import Cookie
 
 def initialize():
     # create a default user
@@ -93,6 +95,14 @@ Password:<input type='text' name='password'><br>
         return [returnStatement]
 
     def login(self, environ, start_response):
+        try:
+            cookie = Cookie.SimpleCookie(environ["HTTP_COOKIE"])
+            username = cookie["username"].value
+            #print "Username = %s" % username
+        except:
+            #print "session cookie not set! defaulting username"
+            username = ''
+
         print environ['wsgi.input']
         form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
 
@@ -107,6 +117,10 @@ Password:<input type='text' name='password'><br>
             password = None
         k = 'Location'
         v = '/'
+
+        # set content-type
+        headers = [('Content-type', 'text/html')]
+
         # Test whether variable is defined to be None
         if username is not None:
              if password is not None:
@@ -115,6 +129,10 @@ Password:<input type='text' name='password'><br>
                      meeplib.set_curr_user(username)
                      k = 'Location'
                      v = '/main_page'
+                     
+                     # set the cookie to the username string
+                     cookie_name, cookie_val = meepcookie.make_set_cookie_header('username',username)
+                     headers.append((cookie_name, cookie_val))
                  else:
                      k = 'Location'
                      v = '/'
@@ -127,8 +145,6 @@ Password:<input type='text' name='password'><br>
 
         print """isValidafter: %s """ %(meeplib.check_user(username, password),)
 
-        # set content-type
-        headers = [('Content-type', 'text/html')]
        
         headers.append((k, v))
         start_response('302 Found', headers)
@@ -143,6 +159,10 @@ Password:<input type='text' name='password'><br>
         k = 'Location'
         v = '/'
         headers.append((k, v))
+
+        cookie_name, cookie_val = meepcookie.make_set_cookie_header('username','')
+        headers.append((cookie_name, cookie_val))
+
         start_response('302 Found', headers)
         
         return "no such content"
