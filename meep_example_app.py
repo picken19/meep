@@ -30,28 +30,28 @@ class MeepExampleApp(object):
 
     def index(self, environ, start_response):
         start_response("200 OK", [('Content-type', 'text/html')])
-
-        username = 'test'
-
-        return ["""<h1>Welcome!</h1><h2>Please Login or create an account.</h2>
+        # get cookie if there is one
+        try:
+            cookie = Cookie.SimpleCookie(environ["HTTP_COOKIE"])
+            username = cookie["username"].value
+            print "Username = %s" % username
+        except:
+            print "session cookie not set! defaulting username"
+            username = ''
+        
+        user = meeplib.get_user(username)
+        print "User = %s" % user
+        if user is None:
+            s = ["""<h1>Welcome!</h1><h2>Please Login or create an account.</h2>
 <form action='login' method='POST'>
 Username: <input type='text' name='username'><br>
 Password:<input type='text' name='password'><br>
 <input type='submit' value='Login'></form>
 
 <p>Don't have an account? Create a user <a href='/create_user'>here</a>"""]
-
-    def main_page(self, environ, start_response):
-        try:
-            meeplib.get_curr_user()
-        except NameError:
-            meeplib.delete_curr_user()
-        headers = [('Content-type', 'text/html')]
-        
-        start_response("200 OK", headers)
-        username = meeplib.get_curr_user()
-
-        return ["""%s logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>""" % (username,)]
+        elif user is not None:
+            s =  ["""%s logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>""" % (username,)]
+        return s
 
     def create_user(self, environ, start_response):
         headers = [('Content-type', 'text/html')]
@@ -127,15 +127,10 @@ Password:<input type='text' name='password'><br>
                  if meeplib.check_user(username, password) is True:
                      new_user = meeplib.User(username, password)
                      meeplib.set_curr_user(username)
-                     k = 'Location'
-                     v = '/main_page'
-                     
                      # set the cookie to the username string
                      cookie_name, cookie_val = meepcookie.make_set_cookie_header('username',username)
                      headers.append((cookie_name, cookie_val))
                  else:
-                     k = 'Location'
-                     v = '/'
                      returnStatement = """<p>Invalid user.  Please try again.</p>"""
 
              else:      
@@ -199,7 +194,7 @@ Password:<input type='text' name='password'><br>
             s.append("There are no threads to display.<p>")
 
         s.append('<hr>')
-        s.append("<a href='../../main_page'>Back to Main Page</a>")
+        s.append("<a href='../../'>Back to Main Page</a>")
             
         headers = [('Content-type', 'text/html')]
         start_response("200 OK", headers)
@@ -220,7 +215,8 @@ Password:<input type='text' name='password'><br>
         title = form['title'].value
         message = form['message'].value
         
-        username = meeplib.get_curr_user()
+        cookie = Cookie.SimpleCookie(environ["HTTP_COOKIE"])
+        username = cookie["username"].value
         user = meeplib.get_user(username)
         
         new_message = meeplib.Message(message, user)
@@ -288,7 +284,8 @@ Password:<input type='text' name='password'><br>
 
         post = form['post'].value
 
-        username = 'test'
+        cookie = Cookie.SimpleCookie(environ["HTTP_COOKIE"])
+        username = username = cookie["username"].value
         user = meeplib.get_user(username)
 
         new_message = meeplib.Message(post, user)
@@ -307,7 +304,6 @@ Password:<input type='text' name='password'><br>
     def __call__(self, environ, start_response):
         # store url/function matches in call_dict
         call_dict = { '/': self.index,
-                      '/main_page': self.main_page,
                       '/create_user': self.create_user,
                       '/add_new_user':self.add_new_user,
                       '/login': self.login,

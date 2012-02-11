@@ -1,0 +1,579 @@
+Any clients will be served...
+Serving HTTP on 0.0.0.0 port 8001 ...
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending header: ('cache-control', 'max-age=0')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Sat, 11 Feb 2012 03:53:15 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 169\r\n\r\ngeorge logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:15 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x1005566e0>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Sat, 11 Feb 2012 03:53:20 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 4655\r\n\r\n<hr><h2>Blah</h2><p>You bet!  The chocolate chip are the best :)</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='0' />\n                    <input name='post_id' type='hidden' value='2' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='0' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>Hi George!</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>Practicing Get</h2><p>This should hopefully do something different than post with the proxy</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='2' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='2' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>Still George</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:20 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: POST /m/delete_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '43')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=0&post_id=2&delete=Delete+Message',)
+Sending: ('HTTP/1.0 302 Found\r\nDate: Sat, 11 Feb 2012 03:53:22 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 12\r\n\r\npost deleted',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Sat, 11 Feb 2012 03:53:22 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 3999\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>Hi George!</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>Practicing Get</h2><p>This should hopefully do something different than post with the proxy</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='2' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='2' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>Still George</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:22 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: POST /m/delete_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '43')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=4&post_id=0&delete=Delete+Message',)
+Sending: ('HTTP/1.0 302 Found\r\nDate: Sat, 11 Feb 2012 03:53:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 12\r\n\r\npost deleted',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Sat, 11 Feb 2012 03:53:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 3618\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>Hi George!</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>Practicing Get</h2><p>This should hopefully do something different than post with the proxy</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='2' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='2' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: POST /m/delete_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '43')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=1&post_id=1&delete=Delete+Message',)
+Sending: ('HTTP/1.0 302 Found\r\nDate: Sat, 11 Feb 2012 03:53:26 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 12\r\n\r\npost deleted',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:26 GMT\r\n',)
+Sending: ("Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 3242\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>Practicing Get</h2><p>This should hopefully do something different than post with the proxy</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='2' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='2' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:26 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: POST /m/delete_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '43')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=2&post_id=0&delete=Delete+Message',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:27 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 12\r\n\r\npost deleted',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Sat, 11 Feb 2012 03:53:27 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 2554\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:27 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556750>
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:31 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 169\r\n\r\n',)
+Sending: ("george logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:31 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x1005567c0>
+Sending: GET /m/add_thread  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:33 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\n\r\n<fo',)
+Sending: ('r',)
+Sending: ('m action=',)
+Sending: ("'ad",)
+Sending: ('d_thread_act',)
+Sending: ("ion' method=",)
+Sending: ("'POST'>Title",)
+Sending: (': <input type',)
+Sending: ("='text' name",)
+Sending: ("='title'><br>Me",)
+Sending: ('ssage: ',)
+Sending: ('<i',)
+Sending: ("nput type='t",)
+Sending: ("ext' name='",)
+Sending: ("message'><br>",)
+Sending: ('<input type=',)
+Sending: ("'submit'></f",)
+Sending: ('orm>',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:33 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556830>
+Sending: POST /m/add_thread_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '24')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/add_thread')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('title=lala&message=ta+da',)
+Sending: ('HTTP/1.0 302 Found\r\nDate: Sat, 11 Feb 2012 03:53:40 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 12\r\n\r\nthread added',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556830>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/add_thread')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ("HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:40 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 3171\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>lala</h2><p>ta da</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='6' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='6' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:40 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x1005568a0>
+Sending: POST /m/reply  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '26')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=5&reply=Reply+to',)
+Sending: ("HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:44 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 283\r\n\r\n<hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p><hr>\n        <form action='reply_action' method='POST'>\n        <input name='thread_id' type='hidden' value='5' />\n        Message: <input type='text' name='post'><br>\n        <input type='submit'>\n        </form>\n        ",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:44 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556910>
+Sending: POST /m/reply_action  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '36')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/reply')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('thread_id=5&post=I+made+a+message%21',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:52 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /m/list\r\nContent-Length: 11\r\n\r\nreply added',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556910>
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/reply')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=george')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ("HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:52 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 3557\r\n\r\n<hr><h2>first post</h2><p>I'm George!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='1' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='1' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>blah</h2><p>blah</p><p>Posted by: bob</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='3' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='3' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>I'm George</h2><p>But I thought I was George?</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='4' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='4' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>fkdjaflkj</h2><p>djlfajfl</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    <hr><p>I made a message!</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='5' />\n                    <input name='post_id' type='hidden' value='1' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='5' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><h2>lala</h2><p>ta da</p><p>Posted by: george</p>\n                    <form action='delete_action' method='POST'>\n                    <input name='thread_id' type='hidden' value='6' />\n                    <input name='post_id' type='hidden' value='0' />\n                    <input name='delete' type='submit' value='Delete Message' />\n                    </form>\n                    \n                <form action='reply' method='POST'>\n                <input name='thread_id' type='hidden' value='6' />\n                <input name='reply' type='submit' value='Reply to' />\n                </form>\n                <hr><a href='../../'>Back to Main Page</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:52 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556910>
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/m/list')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:55 GMT\r\n',)
+Sending: ("Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 169\r\n\r\ngeorge logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:55 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556980>
+Sending: GET /logout  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cookie', 'username=george')
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Sat, 11 Feb 2012 03:53:59 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /\r\nSet-Cookie: username=; Path=/\r\n\r\n',)
+Sending: ('no s',)
+Sending: ('uch',)
+Sending: (' conten',)
+Sending: ('t',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556980>
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cookie', 'username=')
+Sending: ("HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:53:59 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 311\r\n\r\n<h1>Welcome!</h1><h2>Please Login or create an account.</h2>\n<form action='login' method='POST'>\nUsername: <input type='text' name='username'><br>\nPassword:<input type='text' name='password'><br>\n<input type='submit' value='Login'></form>\n\n<p>Don't have an account? Create a user <a href='/create_user'>here</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:53:59 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x1005569f0>
+Sending: POST /login  
+Sending header: ('origin', 'http://localhost:8008')
+Sending header: ('content-length', '26')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('username=bob&password=test',)
+Sending: ('HTTP/1.0 302 Found\r\nDate: Sat, 11 Feb 2012 03:54:04 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nSet-Cookie: username=bob; Path=/\r\nLocation: /\r\n\r\nno such content',)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x1005569f0>
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('referer', 'http://localhost:8008/')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('cookie', 'username=bob')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ("HTTP/1.0 200 OK\r\nDate: Sat, 11 Feb 2012 03:54:04 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 166\r\n\r\nbob logged in!<p><a href='/m/add_thread'>New Thread</a><p><a href='/create_user'>Create User</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	bye
+	connect to localhost:8008
+Connecting to: localhost:8008 <socket._socketobject object at 0x100556520>
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.77 Safari/535.7')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8008')
+Sending header: ('cookie', 'username=bob')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Sat, 11 Feb 2012 03:54:04 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	bye
