@@ -16,6 +16,36 @@ git push origin #changes meep in repository (online update)#
 ## Merge ##
 git merge xyz #merges 
 
+Example
+
+Caitlyns-MacBook-Pro:meep caitlynpickens$ git fetch git://github.com/SheikGeek/meep.git mast\
+er:SheikGeek_master
+From git://github.com/SheikGeek/meep
+ * [new branch]      master     -> SheikGeek_master
+Caitlyns-MacBook-Pro:meep caitlynpickens$ git branch
+  SheikGeek_master
+  angela
+  hkb261
+  ic8
+* master
+  picken19
+
+Caitlyns-MacBook-Pro:meep caitlynpickens$ git checkout SheikGeek_master
+error: Your local changes to the following files would be overwritten by checkout:
+       meep_example_app.py
+       pickle/message_0.pickle
+       pickle/message_1.pickle
+Please, commit your changes or stash them before you can switch branches.
+error: The following untracked working tree files would be overwritten by checkout:
+       meepcookie.py
+       util/TinyHTTPProxy/LICENSE.txt
+       util/TinyHTTPProxy/TinyHTTPProxy.py
+Please move or remove them before you can switch branches.
+Aborting
+
+Caitlyns-MacBook-Pro:meep caitlynpickens$ git checkout SheikGeek_master
+Switched to branch 'SheikGeek_master'
+
 
 ## Status Outputs ##
 git log #shows the history of the repository#
