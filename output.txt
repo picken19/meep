@@ -1,0 +1,40 @@
+save
+hello
+ml error 2
+ml error 3
+ml error 2
+ml error 3
+Greetings Earthlings
+Serving HTTP on port 8000...
+Username = test
+ml error 1 
+this is where we fail
+User = <meeplib.User object at 0x75a730>
+error 8
+num of messages
+1
+Username = test
+ml error 1 
+this is where we fail
+User = <meeplib.User object at 0x75a730>
+error 8
+<socket._fileobject object at 0x756ab0>
+ml error 1 
+ml error 1 
+msg
+num of messages
+2
+1
+<form action='reply_action' method='POST'>Message:<input type='text' name='message'><br><input type='hidden' name='msg_id' value='1'><br><input type='submit' value='Submit' name='add_button'></form>
+<socket._fileobject object at 0x756ab0>
+ml error 1 
+user replied to message msg
+need to update parent!
+CHANGE CHILDREN
+num of messages
+3
+Username = test
+ml error 1 
+this is where we fail
+User = <meeplib.User object at 0x75a730>
+error 8

@@ -1,0 +1,737 @@
+Caitlyns-MacBook-Pro:TinyHTTPProxy caitlynpickens$ python TinyHTTPProxy.py 8001
+Any clients will be served...
+Serving HTTP on 0.0.0.0 port 8001 ...
+	connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ea40>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:03:12] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ("Date: Tue, 14 Feb 2012 05:03:12 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 315\r\n\r\nyou are logged in as user: .<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ea40>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:03:12] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:03:12 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eab0>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:03] "GET http://localhost:8000/login HTTP/1.1" - -
+Sending: GET /login  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending: ('HTTP/1.0 200 OK\r\nDate: Tue, 14 Feb 2012 05:04:03 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\n\r\n',)
+Sending: ('<form a',)
+Sending: ('ction',)
+Sending: ("='l",)
+Sending: ('ogi',)
+Sending: ("n_action' ",)
+Sending: ('metho',)
+Sending: ("d='POS",)
+Sending: ("T'>U",)
+Sending: ('sername',)
+Sending: (': <in',)
+Sending: ('put ty',)
+Sending: ('pe',)
+Sending: ("='",)
+Sending: ('te',)
+Sending: ('xt',)
+Sending: ("' ",)
+Sending: ('na',)
+Sending: ('me=',)
+Sending: ("'u",)
+Sending: ('serna',)
+Sending: ("me'",)
+Sending: (' v',)
+Sending: ('alu',)
+Sending: ("e='",)
+Sending: ("'><b",)
+Sending: ('r',)
+Sending: ('>',)
+Sending: ('Pa',)
+Sending: ('ss',)
+Sending: ('wo',)
+Sending: ('rd:',)
+Sending: (' <',)
+Sending: ('inp',)
+Sending: ('ut ',)
+Sending: ('ty',)
+Sending: ('pe=',)
+Sending: ("'pa",)
+Sending: ('ss',)
+Sending: ('wor',)
+Sending: ("d' ",)
+Sending: ('na',)
+Sending: ('me',)
+Sending: ("='pa",)
+Sending: ('ss',)
+Sending: ('wor',)
+Sending: ("d' ",)
+Sending: ('val',)
+Sending: ("ue='",)
+Sending: ("'><b",)
+Sending: ('r><',)
+Sending: ('inp',)
+Sending: ('ut ',)
+Sending: ('typ',)
+Sending: ("e='",)
+Sending: ('su',)
+Sending: ('bmi',)
+Sending: ("t'",)
+Sending: (' na',)
+Sending: ('m',)
+Sending: ('e="l',)
+Sending: ('og',)
+Sending: ('in',)
+Sending: ('_bu',)
+Sending: ('tt',)
+Sending: ('on">',)
+Sending: ('</f',)
+Sending: ('orm',)
+Sending: ('>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ea08>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:03] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\nDate: Tue, 14 Feb 2012 05:04:03 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eb90>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:08] "POST http://localhost:8000/login_action HTTP/1.1" - -
+Sending: POST /login_action  
+Sending header: ('origin', 'http://localhost:8000')
+Sending header: ('content-length', '46')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/login')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('username=test&password=foo&login_button=Submit',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:08 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nLocation: /\r\n\r\n',)
+Sending: ('no ',)
+Sending: ('su',)
+Sending: ('ch c',)
+Sending: ('ont',)
+Sending: ('e',)
+Sending: ('nt',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eab0>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:08] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/login')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:08 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 319\r\n\r\n',)
+Sending: ("you are logged in as user: test.<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eab0>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:08] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:08 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eae8>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:12] "GET http://localhost:8000/m/add HTTP/1.1" - -
+Sending: GET /m/add  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:12 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\n\r\n<',)
+Sending: ('for',)
+Sending: ('m ac',)
+Sending: ('tio',)
+Sending: ('n=',)
+Sending: ("'a",)
+Sending: ('dd_',)
+Sending: ('ac',)
+Sending: ('tio',)
+Sending: ("n' ",)
+Sending: ('met',)
+Sending: ('hod',)
+Sending: ("='",)
+Sending: ('POS',)
+Sending: ("T'",)
+Sending: ('>Ti',)
+Sending: ('tl',)
+Sending: ('e:',)
+Sending: (' <inpu',)
+Sending: ('t t',)
+Sending: ('yp',)
+Sending: ('e=',)
+Sending: ("'te",)
+Sending: ("xt'",)
+Sending: (' na',)
+Sending: ('me=',)
+Sending: ("'t",)
+Sending: ('itl',)
+Sending: ("e'>",)
+Sending: ('<b',)
+Sending: ('r>',)
+Sending: ('Mess',)
+Sending: ('ag',)
+Sending: ('e:',)
+Sending: ('<in',)
+Sending: ('pu',)
+Sending: ('t ty',)
+Sending: ('pe=',)
+Sending: ("'t",)
+Sending: ("ext'",)
+Sending: (' n',)
+Sending: ('ame',)
+Sending: ("='m",)
+Sending: ('ess',)
+Sending: ('age',)
+Sending: ("'>",)
+Sending: ('<b',)
+Sending: ('r><',)
+Sending: ('inp',)
+Sending: ('ut ',)
+Sending: ('t',)
+Sending: ('ype',)
+Sending: ("='subm",)
+Sending: ("it' n",)
+Sending: ('ame=',)
+Sending: ("'a",)
+Sending: ('dd',)
+Sending: ('_but',)
+Sending: ("ton'>",)
+Sending: ('</fo',)
+Sending: ('rm',)
+Sending: ('>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eb20>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:12] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:12 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:25] "POST http://localhost:8000/m/add_action HTTP/1.1" - -
+Sending: POST /m/add_action  
+Sending header: ('origin', 'http://localhost:8000')
+Sending header: ('content-length', '67')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/add')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('title=hello&message=is+there+a+network+sniffer%3F&add_button=Submit',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nLocation: /m/list\r\nContent-Length: 13\r\n\r\nmessage added',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:25] "GET http://localhost:8000/m/list HTTP/1.1" - -
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/add')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 1779\r\n\r\nid: 0<p>title: test title FOO<p>message: this is my message<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'0\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr >id: 1<p>Reply to: test title FOO<p>message: hello again<p>author: test<px><hr /><hr />id: 2<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'2\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 3<p>title: hi<p>message: test<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'3\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 4<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'4\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 5<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'5\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 6<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'6\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 7<p>title: hello<p>message: is there a network sniffer?<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'7\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr /><a href=\'../../\'>index</a>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ebc8>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:25] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:25 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ea78>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:40] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/list')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:40 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 319\r\n\r\n',)
+Sending: ("you are logged in as user: test.<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eb90>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:40] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:40 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec70>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:42] "GET http://localhost:8000/m/list HTTP/1.1" - -
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:42 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 1779\r\n\r\nid: 0<p>title: test title FOO<p>message: this is my message<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'0\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr >id: 1<p>Reply to: test title FOO<p>message: hello again<p>author: test<px><hr /><hr />id: 2<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'2\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 3<p>title: hi<p>message: test<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'3\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 4<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'4\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 5<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'5\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 6<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'6\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 7<p>title: hello<p>message: is there a network sniffer?<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'7\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr /><a href=\'../../\'>index</a>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eb90>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:42] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:42 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ed50>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:46] "POST http://localhost:8000/m/reply HTTP/1.1" - -
+Sending: POST /m/reply  
+Sending header: ('origin', 'http://localhost:8000')
+Sending header: ('content-length', '27')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/list')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('msg_id=7&reply_button=Reply',)
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:46 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\n\r\n<f',)
+Sending: ('or',)
+Sending: ('m a',)
+Sending: ('ct',)
+Sending: ('ion',)
+Sending: ("='",)
+Sending: ('rep',)
+Sending: ('ly',)
+Sending: ('_a',)
+Sending: ('cti',)
+Sending: ('on',)
+Sending: ("' ",)
+Sending: ('meth',)
+Sending: ('od',)
+Sending: ("='",)
+Sending: ('POS',)
+Sending: ('T',)
+Sending: ("'>Me",)
+Sending: ('ss',)
+Sending: ('ag',)
+Sending: ('e:',)
+Sending: ('<in',)
+Sending: ('pu',)
+Sending: ('t ',)
+Sending: ('typ',)
+Sending: ("e='t",)
+Sending: ('e',)
+Sending: ("xt'",)
+Sending: (' na',)
+Sending: ('me=',)
+Sending: ("'m",)
+Sending: ('es',)
+Sending: ('sag',)
+Sending: ("e'",)
+Sending: ('><b',)
+Sending: ('r>',)
+Sending: ('<i',)
+Sending: ('npu',)
+Sending: ('t t',)
+Sending: ('yp',)
+Sending: ("e='",)
+Sending: ('hi',)
+Sending: ('dde',)
+Sending: ("n'",)
+Sending: (' n',)
+Sending: ('am',)
+Sending: ('e=',)
+Sending: ("'m",)
+Sending: ('s',)
+Sending: ('g',)
+Sending: ("_id'",)
+Sending: (' v',)
+Sending: ('alue',)
+Sending: ("='7'><br",)
+Sending: ('><inpu',)
+Sending: ('t t',)
+Sending: ('ype',)
+Sending: ("='s",)
+Sending: ('ub',)
+Sending: ('mi',)
+Sending: ("t'",)
+Sending: (' ',)
+Sending: ('valu',)
+Sending: ('e=',)
+Sending: ("'Su",)
+Sending: ('bm',)
+Sending: ("it' ",)
+Sending: ('na',)
+Sending: ('me',)
+Sending: ("='a",)
+Sending: ('dd',)
+Sending: ('_bu',)
+Sending: ('tto',)
+Sending: ("n'",)
+Sending: ('><',)
+Sending: ('/f',)
+Sending: ('orm',)
+Sending: ('>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:47] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:47 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ed88>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:54] "POST http://localhost:8000/m/reply_action HTTP/1.1" - -
+Sending: POST /m/reply_action  
+Sending header: ('origin', 'http://localhost:8000')
+Sending header: ('content-length', '55')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/reply')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('message=why+yes%2C+there+is.&msg_id=7&add_button=Submit',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:54 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nLocation: /m/list\r\nContent-Length: 11\r\n\r\nreply added',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:54] "GET http://localhost:8000/m/list HTTP/1.1" - -
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/reply')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:54 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 1856\r\n\r\nid: 0<p>title: test title FOO<p>message: this is my message<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'0\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr >id: 1<p>Reply to: test title FOO<p>message: hello again<p>author: test<px><hr /><hr />id: 2<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'2\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 3<p>title: hi<p>message: test<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'3\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 4<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'4\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 5<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'5\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 6<p>title: Greetings Earthlings<p>message: The meep message board is open.<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'6\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr /><hr />id: 7<p>title: hello<p>message: is there a network sniffer?<p>author: test<px><form action=\'reply\' method=\'POST\'><input type=\'hidden\' value=\'7\' name=\'msg_id\'><input type=\'submit\' value="Reply" name="reply_button"></form><hr >id: 8<p>Reply to: hello<p>message: why yes, there is.<p>author: test<px><hr /><hr /><a href=\'../../\'>index</a>',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ed50>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:54] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:54 GMT\r\n',)
+Sending: ('Server: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eae8>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:59] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/list')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:59 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 319\r\n\r\n',)
+Sending: ("you are logged in as user: test.<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ece0>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:04:59] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:04:59 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ed88>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:01] "GET http://localhost:8000/logout HTTP/1.1" - -
+Sending: GET /logout  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:01 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nLocation: /\r\n\r\n',)
+Sending: ('no s',)
+Sending: ('uch con',)
+Sending: ('tent',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eae8>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:01] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:01 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ("Content-type: text/html\r\nContent-Length: 315\r\n\r\nyou are logged in as user: .<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:01] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:01 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ee30>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:03] "POST http://localhost:8000/delete_all_messages_action HTTP/1.1" - -
+Sending: POST /delete_all_messages_action  
+Sending header: ('origin', 'http://localhost:8000')
+Sending header: ('content-length', '46')
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('content-type', 'application/x-www-form-urlencoded')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('delete_all_messages_button=Delete+all+messages',)
+Sending: ('HTTP/1.0 302 Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:03 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nLocation: /m/list\r\nContent-Length: 20\r\n\r\nall messages deleted',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ece0>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:03] "GET http://localhost:8000/m/list HTTP/1.1" - -
+Sending: GET /m/list  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/')
+Sending header: ('cache-control', 'max-age=0')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:03 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ("Content-type: text/html\r\nContent-Length: 26\r\n\r\n<a href='../../'>index</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ec38>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:03] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:03 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 15\r\n\r\n',)
+Sending: ('Page not found.',)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52eca8>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:07] "GET http://localhost:8000/ HTTP/1.1" - -
+Sending: GET /  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending header: ('referer', 'http://localhost:8000/m/list')
+Sending: ('HTTP/1.0 200 OK\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:07 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\nContent-type: text/html\r\nContent-Length: 315\r\n\r\n',)
+Sending: ("you are logged in as user: .<p><a href='/m/add'>Add a message</a><p><form action='delete_all_messages_action' method='POST'> <input type='submit' name='delete_all_messages_button' value='Delete all messages'></form><p><a href='/login'>Log in</a><p><a href='/logout'>Log out</a><p><a href='/m/list'>Show messages</a>",)
+	 bye
+	 connect to localhost:8000
+Connecting to: localhost:8000 <socket._socketobject object at 0x52ed88>
+1.0.0.127.in-addr.arpa - - [14/Feb/2012 00:05:07] "GET http://localhost:8000/favicon.ico HTTP/1.1" - -
+Sending: GET /favicon.ico  
+Sending header: ('accept-language', 'en-US,en;q=0.8')
+Sending header: ('accept-encoding', 'gzip,deflate,sdch')
+Sending header: ('connection', 'close')
+Sending header: ('accept', '*/*')
+Sending header: ('user-agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.46 Safari/535.11')
+Sending header: ('accept-charset', 'ISO-8859-1,utf-8;q=0.7,*;q=0.3')
+Sending header: ('host', 'localhost:8000')
+Sending: ('HTTP/1.0 404 Not Found\r\n',)
+Sending: ('Date: Tue, 14 Feb 2012 05:05:07 GMT\r\nServer: WSGIServer/0.1 Python/2.7.2\r\n',)
+Sending: ('Content-type: text/html\r\nContent-Length: 15\r\n\r\nPage not found.',)
+	 bye
+^CTraceback (most recent call last):
+  File "TinyHTTPProxy.py", line 138, in <module>
+    BaseHTTPServer.test(ProxyHandler, ThreadingHTTPServer)
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/BaseHTTPServer.py", line 602, in test
+    httpd.serve_forever()
+  File "/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/SocketServer.py", line 225, in serve_forever
+    r, w, e = select.select([self], [], [], poll_interval)
+KeyboardInterrupt
