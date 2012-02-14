@@ -1,0 +1,10 @@
+go http://localhost:8008/
+
+fv 1 username 'test'
+fv 1 password 'foo'
+submit
+
+follow "Show messages"
+
+fv 1 delete '0'
+submit

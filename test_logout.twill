@@ -1,0 +1,11 @@
+go http://localhost:8008/
+
+fv 1 username 'test'
+fv 1 password 'foo'
+submit
+
+follow "Log out"
+
+url /
+
+
