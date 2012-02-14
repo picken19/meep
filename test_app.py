@@ -110,17 +110,17 @@ class TestApp(unittest.TestCase):
 
     def test_create_thread_action(self):
         environ = {}                    # make a fake dict
-        environ['PATH_INFO'] = '/m/add_thread'
+        environ['PATH_INFO'] = '/m/add_thread_action'
         environ['wsgi.input'] = ''
-        environ['HTTP_COOKIE'] = "username=test"
+        environ['HTTP_COOKIE'] = "username=george"
 
         form_dict = {}
-        form_dict['title'] = "Test title"
-        form_dict['message'] = "Test message"
+        form_dict['title'] = "title"
+        form_dict['message'] = "message"
         environ['QUERY_STRING'] = urllib.urlencode(form_dict)
 
         def fake_start_response(status, headers):
-            assert status == '200 OK'
+            assert status == '302 Found'
             assert ('Content-type', 'text/html') in headers
 
         data = self.app(environ, fake_start_response)
@@ -133,10 +133,11 @@ class TestApp(unittest.TestCase):
             assert ('Content-type', 'text/html') in headers
 
         data = self.app(environ, fake_start_response)
+        print "data: %s" %(data,)
 
         assert 'Back to Main Page' in data[0]
-        assert "Test title" in data
-        assert "Test message" in data
+        assert "title" in data[0]
+        assert "message" in data[0]
 
     def test_reply(self):
         environ = {}                    # make a fake dict
