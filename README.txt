@@ -3,13 +3,19 @@ meeplib for CSE 491, 2012, at MSU.  YYY something else!
 Titus Brown, ctb@msu.edu.
 and
 Caitlyn Pickens, picken19@msu.edu
+With input from github users newportt and SheikGeek
 
-##Version 5##
+##Version 7##
 
-	  Implemented methods
+	  Features
 	    Delete all
 	    Delete one
 	    Reply
+	    Login/out
+	    Create user
+	    Add message
+	    Cookies
+	    Twill and unit tests
 
 	  To fix
 	    Nesting layout of replies
@@ -19,6 +25,6 @@ Caitlyn Pickens, picken19@msu.edu
 	    CSS templates
 	    cssutils
 
+	  Outdated
+	    twill tests for add, delete and reply
 
-Testing push
-newportt
