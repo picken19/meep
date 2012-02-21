@@ -1,7 +1,12 @@
-{% if name %}
-    Hello {{ name }}
-{% endif %}
-<form method="POST">
-<input type="text" name="name" value="Enter your name">
-<input type="submit">
-</form>
+{% extends "base.html" %}
+
+{% block body %}
+  <h3>Welcome, {{ username }}.</h3>
+  <a href='/m/add_message'>New Message</a><br/><br/>
+  <a href='/create_user'>Create User</a><br/><br/>
+  <a href='/logout'>Log out</a><br/><br/>
+  <a href='/m/list'>Show messages</a><br/>
+  <form action='delete_all_messages_action' method='POST'> 
+    <input type='submit' name='delete_all_messages_button' value='Delete all messages'>
+  </form><p>
+{% endblock body %}

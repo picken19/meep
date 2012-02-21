@@ -6,14 +6,13 @@ import cPickle
 from Cookie import SimpleCookie
 from jinja2 import Environment, FileSystemLoader
 
-##in meep##
+##in templates##
 
 def initialize():
 	u = meeplib.User('test', 'foo')
 	m = meeplib.Message('Greetings Earthlings', 'The meep message board is open.', u, -1, [])
-
+	
 env = Environment(loader=FileSystemLoader('templates'))
-
 def render_page(filename, **variables):
 	template = env.get_template(filename)
 	s = template.render(**variables)
@@ -42,18 +41,9 @@ class MeepExampleApp(object):
 	def index(self, environ, start_response):
 		start_response("200 OK", [('Content-type', 'text/html')])
 
-		username = check_cookie(environ)
-		print "index a"
-		user = meeplib.get_user(username)
-		print "User: %s" % user
+		username = 'test'
 
-		if user is None:
-			print "index b"
-			return [ render('login.html') ]
-
-		elif user is not None:
-			print "index c"
-			return [ render_page('index.html', username=username) ]
+		return [ render_page('index.html', username=username) ]
 
 	def create_user(self, environ, start_response):
 		headers = [('Content-type', 'text/html')]

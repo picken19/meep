@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <h1>Welcome to meep!</h1>
+  <h2>Please Login or create an account.</h2>
+  <form action='login' method='POST'>
+    Username: <input type='text' name='username'><br>
+    Password:<input type='text' name='password'><br>
+    <input type='submit' value='Login'>
+  </form>
+  <p>Not a member? Create an account <a href='/create_user'>here</a>
+{% endblock body %}
