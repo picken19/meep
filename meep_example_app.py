@@ -49,7 +49,7 @@ class MeepExampleApp(object):
 
 		if user is None:
 			print "index b"
-			return [ render('login.html') ]
+			return [ render_page('login.html') ]
 
 		elif user is not None:
 			print "index c"
@@ -149,6 +149,7 @@ class MeepExampleApp(object):
 		headers.append((k, v))
 		start_response('302 Found', headers)
 
+		print returnStatement
 		return "no such content"	
 
 	def logout(self, environ, start_response):
@@ -187,7 +188,6 @@ class MeepExampleApp(object):
 					s.append('Reply to: %s<p>' % (m.title))
 					s.append('message: %s<p>' % (n.post))
 					s.append('author: %s<px>' % (n.author.username))
-#					s.append('<form action="delete_message" method="POST"><input type="hidden" name="id" value="%d"><input type="submit" value="Delete Message" name="delete_button"></form>' % (m.id))
 				s.append('<hr />')
 				s.append('<hr />')	
 		s.append("<a href='../../'>index</a>")
@@ -250,41 +250,45 @@ class MeepExampleApp(object):
 
 	#call the method to add a single message
 	def add_message(self, environ, start_response):
+		print "add message 1"
 		headers = [('Content-type', 'text/html')]
 		username = check_cookie(environ)
+		print "add message 2"
 		print username
 		if username == '':
+			print "add message 3"
 			print "no user logged in"
 			#Send to error page if no user is logged in
 			headers.append(('Location', '/m/no_user'))
 			start_response("302 found", headers)
-			return "no such content"
-		else:
-			start_response("200 OK", headers)
-			return """
-			<form action='add_action' method='POST'>
-			Title: <input type='text' name='title'><br>
-			Message:<input type='text' name='message'><br>
-			<input type='submit' name='add_button'></form>
-			"""
+			return "you must be logged in to post to meep"
+
+		print "add message 4"
+		start_response("200 OK", headers)
+		return render_page('add_message.html')
+
 
 	#add a single message action
 	def add_message_action(self, environ, start_response):
+		print "add message action 1"
 		print environ['wsgi.input']
 		form = cgi.FieldStorage(fp=environ['wsgi.input'], environ=environ)
 
 		title = form['title'].value
 		message = form['message'].value
 		
+		print "add messaage action 2"
 		username = check_cookie(environ)
 		user = meeplib.get_user(username)
 		
+		print "add message action 3"
 		new_message = meeplib.Message(title, message, user, -1, [])
 
 		headers = [('Content-type', 'text/html')]
 		headers.append(('Location', '/m/list'))
 		start_response("302 Found", headers)
 		meeplib.save_state()
+		print "add message action 4"
 		return ["message added"]
 
 	#how do we pass in the parent id?
@@ -325,14 +329,15 @@ class MeepExampleApp(object):
 	
 	def __call__(self, environ, start_response):
 		# store url/function matches in call_dict
+		print "enter call dict"
 		call_dict = { '/': self.index,
 					  '/create_user': self.create_user,
 					  '/add_new_user':self.add_new_user,
 					  '/login': self.login,
 					  '/logout': self.logout,
 					  '/m/list': self.list_messages,
-					  '/m/add': self.add_message,
-					  '/m/add_action': self.add_message_action,
+					  '/m/add_message': self.add_message,
+					  '/m/add_message_action': self.add_message_action,
 					  '/m/delete_all': self.delete_all_messages_action,
 					  '/delete_all_messages_action': self.delete_all_messages_action,
 					  '/m/delete_one': self.delete_one_message,
@@ -347,12 +352,15 @@ class MeepExampleApp(object):
 		fn = call_dict.get(url)
 
 		if fn is None:
+			print "call 1"
 			start_response("404 Not Found", [('Content-type', 'text/html')])
 			return ["Page not found."]
 
 		try:
+			print "call 2"
 			return fn(environ, start_response)
 		except:
+			print "call 3"
 			tb = traceback.format_exc()
 			x = "<h1>Error!</h1><pre>%s</pre>" % (tb,)
 
