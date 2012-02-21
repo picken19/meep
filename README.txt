@@ -18,8 +18,8 @@ With input from github users newportt and SheikGeek
 	    Twill and unit tests
 
 	  To fix
-	    Nesting layout of replies
-	    Remove reply to replies feature
+	    unittest for test_app 
+	    
 
 	  Explored options
 	    CSS templates
