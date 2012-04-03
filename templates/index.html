@@ -1,30 +1,6 @@
 {% extends "base.html" %}
 
-{% block head %}
-    {{ super() }}
-    <style type="text/css">
-        .important { color: #336699; }
-    </style>
-{% endblock %}
-
-{% block body %}
-
-  <h3>welcome, {{ username }}.</h3>
-
-  <ul>
-  <li><a href='/m/add_message'>new message</a><br/><br/></li>
-  <li><a href='/create_user'>create user</a><br/><br/></li>
-  <li><a href='/logout'>log out</a><br/><br/></li>
-  <li><a href='/m/list'>show messages</a><br/></li>
-  </ul>
-
-  <form action='delete_all_messages_action' method='POST'> 
-    <input type='submit' name='delete_all_messages_button' value='Delete all messages'>
-  </form><p>
-	
-<div id="footer">
-	{% block footer %}
-	{% endblock footer %}
-	</div>
-{% endblock body %}
+	{% block body %}
+		<h3>welcome, {{ username }}.</h3>
+	{% endblock body %}
 

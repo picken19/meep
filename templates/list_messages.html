@@ -1,18 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %}meep: list messages!{% endblock title %}
+{% block title %}all threads{% endblock title %}
 
 {% block body %}
 
- {% for item in messages %}
+{% for t in threads %}
 
-  id: {{ item.id }}<p>
-  title: {{ item.title }}<p>
-  message: {{ item.post }}<p>
-  author: {{ item.author.username }}<p>
-  <hr>
- {% endfor %}
+	<hr>
+	<h4> {{ t.title }} </h4><p>
 
-<a href='../../'>index</a>
+	{% for item in thread.get_all_posts() %}
 
+	<hr>
+	<p>{{ item.post }}</p>
+	<p><i>{{ item.author.username }}</i></p>
+	{% if user.username == item.author.username %}
+	<form action='delete_action' method='POST'>
+	<input name='thread_id' type='hidden' value='{{ thread.id }}' />
+	<input name='post_id' type='hidden' value='{{ item.id }}' />
+	<input name='delete' type='submit' value='Delete Message' />
+	</form>
+	{% endif %}
+	<br/>
+	{% endfor %}
+	<form action='reply' method='POST'>
+	<input name='thread_id' type='hidden' value='{{ thread.id }}' />
+	<input name='reply' type='submit' value='Reply to' />
+	</form>
+	<br/><br/>
+{% endfor %}
 {% endblock body %}

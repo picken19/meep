@@ -14,12 +14,13 @@ html {
 	background-color: #004444;
 	color: #FFFFFF;
 }
-#main{
+div.gray{
     padding: 1em;
     background-color:#787878;
     margin: 1.5em auto;
     width: 750px;
     border: #007777 solid 10px;
+	height:25%;
 }
 a{
 	color:#FFAA00;	

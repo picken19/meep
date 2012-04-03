@@ -1,0 +1,23 @@
+{% extends "base2.html" %}
+
+{% block title %}create user{% endblock title %}
+
+{% block body %}
+
+	<div class='login_cols'>
+	<h3>create an account:</h3>
+	<div class='indent'>
+		<form action='create_user' method='POST'>
+			<div style='margin-bottom:4px;'>
+			username: <input type='text' name='username'><br/>
+			</div>
+			password: <input type='text' name='password'><br/><br/>
+			<input type='submit' value='Create User'>
+		</form>
+	</div>
+	</div>
+	
+{% endblock body %}
+
+
+

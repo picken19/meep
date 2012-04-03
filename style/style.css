@@ -1,0 +1,24 @@
+/* CSS Document */
+
+* {margin: 0;
+   padding: 0;}
+   
+html {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background-color: #004444;
+	color: #000000;
+}
+#main{
+    padding: 1em;
+    background-color: #FEFEFE;
+    margin: 1.5em auto;
+    width: 750px;
+    border: #00AAAA solid 10px;
+}
+h1 {
+    background-color:#00AAAA;
+    color: #004444;
+    padding-bottom: 50px;
+    border-bottom: solid 10px #FFAA00;
+}
+
